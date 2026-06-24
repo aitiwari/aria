@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* High Density Dark Theme Colors */
+  --color-brand-primary: #87A396;
+  --color-brand-primary-hover: #A3BCB0;
+  --color-dark-base: #0A0A0A;
+  --color-dark-panel: #111111;
+  --color-dark-header: #0F0F0F;
+  --color-dark-sidebar: #0D0D0D;
+  --color-dark-card: #111111;
+  --color-dark-input: #1A1A1A;
+  --color-dark-border: #2A2A2A;
+  --color-text-main: #E4E4E4;
+  --color-text-muted: #666666;
+  --color-text-darker: #444444;
+}
+
+/* Base Body Style override */
+body {
+  background-color: #0A0A0A;
+  color: #E4E4E4;
+}
+
+/* Custom Scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2A2A;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #87A396;
+}
+
+/* Animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+    box-shadow: 0 0 10px rgba(135, 163, 150, 0.1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.01);
+    box-shadow: 0 0 20px rgba(135, 163, 150, 0.3);
+  }
+}
+
+.pulse-glow {
+  animation: pulseGlow 2.5s infinite ease-in-out;
+}
